@@ -5,6 +5,7 @@ import openpyxl
 from sklearn import tree
 
 
+<<<<<<< HEAD
 def draw_tree(name_file):
     df = pd.read_excel(name_file)
     x = df.iloc[:, 1:]
@@ -13,6 +14,22 @@ def draw_tree(name_file):
     y.head(3)
 
     model = tree.DecisionTreeClassifier(criterion="gini", max_depth=3)
+=======
+def load(name_file, max_depth, min_size):
+    try:
+        df = pd.read_excel(name_file)
+        x = df.iloc[:, 1:]
+        y = df.iloc[:, :1]
+        x.head(3)
+        y.head(3)
+        return draw_tree(x, y, max_depth, min_size)
+    except ValueError:
+        return "Неверный формат файла"
+
+
+def draw_tree(x, y, max_depth, min_size):
+    model = tree.DecisionTreeClassifier(criterion="gini", max_depth=max_depth, min_samples_leaf=min_size)
+>>>>>>> 764d558 (Initial commit)
     model.fit(x, y)
     print(model.score(x, y))
     fig = plt.figure(figsize=(6, 6))
