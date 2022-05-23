@@ -4,11 +4,11 @@ from tkinter import Tk, Text
 from tkinter import *
 from PIL import Image
 from PIL import ImageTk
-<<<<<<< HEAD
+
 from main import draw_tree
-=======
+
 from main import load
->>>>>>> 764d558 (Initial commit)
+
 import idlelib.tooltip
 from idlelib.tooltip import Hovertip
 
@@ -21,21 +21,9 @@ def callback():
 
 def click_button():
     path = text.get("1.0","end-1c")
-<<<<<<< HEAD
+
     print(path)
-    if path != '':
-        score = draw_tree(path)
-        canvas = tk.Canvas(win, height=600, width=600)
-        img = tk.PhotoImage(file='filename.png')
-        image = canvas.create_image(0, 0, anchor='nw', image=img)
-        # canvas.grid(row=2,column=1)
-        canvas.pack()
-        label_accuracy = tk.Label(win, text="Точность: " + str(score), font=("Helvetica", 14))
-        label_accuracy.pack(ipadx=10, ipady=10)
-    else:
-        label_accuracy = tk.Label(win, text='Выберите файл!', font=("Helvetica", 25))
-        label_accuracy.pack(ipadx=10, ipady=10)
-=======
+    
     max_depth = max_depth_text.get("1.0","end-1c")
     min_size = min_size_text.get("1.0","end-1c")
     if max_depth == '':
@@ -66,17 +54,15 @@ def click_button():
         label_accuracy = tk.Label(win, text='Выберите файл!', font=("Helvetica", 25))
         label_accuracy.pack(ipadx=10, ipady=10)
         text.delete('1.0', END)
->>>>>>> 764d558 (Initial commit)
+
 
 # Создаем окно приложения
 win = Tk()
 win.title('Деревья решений')
 win.minsize(800, 500)
 win.resizable(True, True)
-<<<<<<< HEAD
 
-=======
->>>>>>> 764d558 (Initial commit)
+
 file_top = tk.Frame(win)
 text = tk.Text(file_top, height=1)
 text.pack(side='left')
