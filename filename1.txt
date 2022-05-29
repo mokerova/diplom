@@ -1,0 +1,60 @@
+def funciya():
+x1 = 5x2 = 4x3 = 8x4 = 6x5 = 7    if x4 <= 20.07:
+        if x3 <= 5.97:
+            if x1 <= 0.29:
+                if x5 <= 0.53:
+                    class = 2
+                if x5 >  0.53:
+                    class = 1
+            if x1 >  0.29:
+                if x2 <= -0.27:
+                    if x1 <= 0.37:
+                        if x5 <= 0.45:
+                            if x3 <= 5.60:
+                                class = 2
+                            if x3 >  5.60:
+                                class = 1
+                        if x5 >  0.45:
+                            class = 2
+                    if x1 >  0.37:
+                        if x2 <= -0.27:
+                            class = 1
+                        if x2 >  -0.27:
+                            if x3 <= 5.40:
+                                class = 2
+                            if x3 >  5.40:
+                                class = 1
+                if x2 >  -0.27:
+                    class = 1
+        if x3 >  5.97:
+            if x3 <= 6.14:
+                class = 2
+            if x3 >  6.14:
+                if x1 <= 0.26:
+                    class = 2
+                if x1 >  0.26:
+                    class = 1
+    if x4 >  20.07:
+        if x1 <= 0.42:
+            if x3 <= 5.40:
+                class = 1
+            if x3 >  5.40:
+                if x1 <= 0.33:
+                    class = 2
+                if x1 >  0.33:
+                    if x1 <= 0.35:
+                        if x3 <= 5.97:
+                            if x5 <= 0.47:
+                                if x2 <= -0.27:
+                                    class = 1
+                                if x2 >  -0.27:
+                                    class = 2
+                            if x5 >  0.47:
+                                class = 1
+                        if x3 >  5.97:
+                            class = 2
+                    if x1 >  0.35:
+                        class = 2
+        if x1 >  0.42:
+            class = 1
+    return class
